@@ -10,12 +10,14 @@ import com.google.firebase.messaging.FirebaseMessaging;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
+    private static final String TOPIC = "test_topic";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // 푸시토큰을 조회하는 버튼
         Button logTokenButton = findViewById(R.id.logTokenButton);
 
         logTokenButton.setOnClickListener(v -> {
@@ -31,6 +33,23 @@ public class MainActivity extends AppCompatActivity {
 
                         // Log and toast
                         String msg = getString(R.string.msg_token_fmt, token);
+                        Log.d(TAG, msg);
+                        Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+                    });
+        });
+
+        // 푸시 토픽을 구독하는 버튼
+        Button topicButton = findViewById(R.id.subscribeTopicButton);
+
+        topicButton.setOnClickListener(v -> {
+            FirebaseMessaging.getInstance().subscribeToTopic(TOPIC)
+                    .addOnCompleteListener(task -> {
+
+                        String msg = getString(R.string.msg_subscribed);
+                        if (!task.isSuccessful()) {
+                            msg = getString(R.string.msg_subscribe_failed);
+                        }
+
                         Log.d(TAG, msg);
                         Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
                     });
