@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "748461499987",
+    "project_id": "coinplug-push-testing",
+    "storage_bucket": "coinplug-push-testing.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748461499987:android:4ca2625329c330ee1388a6",
+        "android_client_info": {
+          "package_name": "io.omnipede.pushtesting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "748461499987-cj798bep14m5v0bkfjc5df7a7u0nuajh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyGMfVTiIsvamQmQX_MBsVv52kBo570Tw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "748461499987-cj798bep14m5v0bkfjc5df7a7u0nuajh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "748461499987-ok7579gq2u771ino0ntmm05rrt428pta.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.omnipede.pushtest"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
